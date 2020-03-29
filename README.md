@@ -26,6 +26,12 @@ user@mylaptop:~$ ssh yourNetID@bluemoon-user1.uvm.edu
 [yourNetID@dg-user1 scratch]$ srun --gres=gpu:1 --pty bash
 ```
 
+If you stuck here with some information such as:
+```
+srun: job 123456 queued and waiting for resources
+```
+It means all GPUs are busy running others' tasks, you will need to try this another time. You can use `squeue` to see the waiting queue. `Ctrl+C` to abort waiting.
+
 4. Prepare for running. Tell the program to copy newest executables and use Sida's environment.
 
 ```bash
@@ -60,3 +66,4 @@ Learn even more on `sun` and more commands? Refer to the documentation of softwa
 Learn more how to use gpuVoxels? Refer to [gpuVoxels docs](https://gpuvoxels.readthedocs.io/en/docs/).
 
 How to build VoxCAD from source and play history files? Refer to [gpuVoxels GitHub](https://github.com/liusida/gpuVoxels).
+
