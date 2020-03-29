@@ -67,3 +67,11 @@ Learn more how to use gpuVoxels? Refer to [gpuVoxels docs](https://gpuvoxels.rea
 
 How to build VoxCAD from source and play history files? Refer to [gpuVoxels GitHub](https://github.com/liusida/gpuVoxels).
 
+## Known issue
+
+### Anaconda
+
+The environment may conflict with `Anaconda` (luckily, `miniconda` is ok), causing errors about the default path of `g++`. A temporary solution is to rename the default `anaconda` folder to anything else and instead of using `conda` to load conda environment, start conda environment by using the command: 
+```
+source activate you-env
+```
