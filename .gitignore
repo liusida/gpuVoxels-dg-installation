@@ -1,3 +1,10 @@
+# Custom files
+Voxelyze3
+vx3_node_worker
+workspace
+*.history
+output.xml
+
 # Prerequisites
 *.d
 
