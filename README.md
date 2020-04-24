@@ -32,7 +32,7 @@ srun: job 123456 queued and waiting for resources
 ```
 It means all GPUs are busy running others' tasks, you will need to try this another time. You can use `squeue` to see the waiting queue. `Ctrl+C` to abort waiting.
 
-4. Prepare for running. Tell the program to copy newest executables and use Sida's environment.
+4. Once you have been assigned a node, you can prepare for running. Tell the program to copy newest executables and use Sida's environment.
 
 ```bash
 [yourNetID@dg-gpunode04 ~]$ cd scratch/gpuVoxels-dg-installation
@@ -45,13 +45,17 @@ env.sh  README.md  update.sh  Voxelyze3  vx3_node_worker  zoo
 5. Run! Voxelyze! Run!
 
 ```bash
-[yourNetID@dg-gpunode04 gpuVoxels-dg-installation]$ ./Voxelyze3 -i zoo/basic/
+[yourNetID@dg-gpunode04 gpuVoxels-dg-installation]$ ./Voxelyze3 -i zoo/basic/ -o report.xml -f
 ...
 # you will see the positions and orientations of voxels over time.
 ...
 ```
 
-6. Save the history file.
+6. Check the `report.xml`.
+
+It is just a xml. Read the `details` tag for more information.
+
+7. Save the history file.
 
 ```bash
 [yourNetID@dg-gpunode04 gpuVoxels-dg-installation]$ ./Voxelyze3 -i zoo/basic/ > a.history
