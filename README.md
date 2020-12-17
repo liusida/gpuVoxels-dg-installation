@@ -1,5 +1,7 @@
 # gpuVoxels-dg-installation
-Easiest way to install gpuVoxels on DeepGreen@UVM
+Easiest way to install voxcraft-sim on DeepGreen@UVM
+
+First thing first, when you see gpuVoxels, think `voxcraft-sim`.
 
 ## Step-by-step instruction
 
@@ -39,13 +41,13 @@ It means all GPUs are busy running others' tasks, you will need to try this anot
 [yourNetID@dg-gpunode04 gpuVoxels-dg-installation]$ sh update.sh
 [yourNetID@dg-gpunode04 gpuVoxels-dg-installation]$ source env.sh
 [yourNetID@dg-gpunode04 gpuVoxels-dg-installation]$ ls
-env.sh  README.md  update.sh  Voxelyze3  vx3_node_worker  zoo
+env.sh  README.md  update.sh  voxcraft-sim  vx3_node_worker  zoo
 ```
 
-5. Run! Voxelyze! Run!
+5. Run! voxcraft-sim! Run!
 
 ```bash
-[yourNetID@dg-gpunode04 gpuVoxels-dg-installation]$ ./Voxelyze3 -i zoo/basic/ -o report.xml -f
+[yourNetID@dg-gpunode04 gpuVoxels-dg-installation]$ ./voxcraft-sim -i zoo/basic/ -o report.xml -f
 ...
 # you will see the positions and orientations of voxels over time.
 ...
@@ -58,7 +60,7 @@ It is just a xml. Read the `details` tag for more information.
 7. Save the history file.
 
 ```bash
-[yourNetID@dg-gpunode04 gpuVoxels-dg-installation]$ ./Voxelyze3 -i zoo/basic/ > a.history
+[yourNetID@dg-gpunode04 gpuVoxels-dg-installation]$ ./voxcraft-sim -i zoo/basic/ > a.history
 ```
 
 ## More information
